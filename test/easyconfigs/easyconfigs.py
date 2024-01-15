@@ -485,7 +485,7 @@ class EasyConfigTest(TestCase):
                         break
 
         # for some dependencies, we allow exceptions for software with the same version
-        # but with a -64bit-int versionsuffix in both the dependency and all its dependents
+        # but with a -int64 versionsuffix in both the dependency and all its dependents
         int64_deps = ['SCOTCH', 'METIS']
         if dep in int64_deps and len(dep_vars) > 1:
             unique_dep_vers = {version_regex.search(x).group('version') for x in list(dep_vars)}
